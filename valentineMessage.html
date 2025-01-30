@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Message</title>
+  <link rel="stylesheet" href="valentineMessage.css">
+</head>
+<body>
+  <div class="message-container">
+    <h1>💌 A Special Valentine’s Message for You 💌</h1>
+    
+    <!-- Envelope Section -->
+    <div class="envelope" onclick="toggleMessage()">
+      <div class="heart">❤️</div>
+      <div class="envelope-open" id="envelope">
+        <p>Click the heart to open the message!</p>
+      </div>
+    </div>
+
+    <!-- Flying Hearts -->
+    <div id="flyingHearts"></div>
+
+    <!-- Hidden Valentine Message -->
+    <div id="valentineMessage" class="hidden">
+      <p>"To my one and only,</p>
+      <p>On this special day, I just want to remind you how incredibly important you are to me. You bring so much love, joy, and warmth into my life, and I’m forever grateful to have you by my side. Your smile lights up the darkest days, and your heart is a treasure I will cherish forever.</p>
+      <p>With every beat of my heart, I am reminded of how lucky I am to have found someone as kind, loving, and amazing as you. You are the reason I believe in love, the reason I smile, and the reason I find peace in the chaos of life. Every moment with you feels like a beautiful dream, and I never want to wake up.</p>
+      <p>Thank you for being my strength when I am weak, my laughter when I feel down, and my light when the world seems dim. You make everything better simply by being you. I can’t imagine a future without you, and I look forward to creating a lifetime of memories together.</p>
+      <p>On this Valentine’s Day, I want to celebrate <em>us</em>, everything we’ve been through, and everything that lies ahead. You are my heart, my soulmate, and my forever Valentine. I love you more than words can express, and I always will.</p>
+      <p>Happy Valentine’s Day, my love. 💖"</p>
+    </div>
+
+    <!-- More Button to Display Another Message -->
+    <div id="moreMessage" class="hidden">
+      <p>Don't feel awkward when we see each other. We'll still be friends, and I cherish our bond, no matter what! 😊</p>
+    </div>
+
+  </div>
+
+  <script src="valentineMessage.js"></script>
+</body>
+</html>

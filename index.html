@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Valentine's Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Hello, Welcome!</h1>
+    <p>Please enter your name:</p>
+    <input type="text" id="userName" placeholder="Enter your name">
+    <p id="errorMessage" style="color: red; display: none;">Please enter a valid name before continuing.</p>
+    
+    <script>
+      // Function to check if a name is entered and redirect after 3 seconds
+      function checkNameAndRedirect() {
+        const userName = document.getElementById('userName').value;
+
+        // Regular expression to allow only letters (both uppercase and lowercase)
+        const letterOnlyRegex = /^[A-Za-z]+$/;
+
+        // Check if the user entered only letters
+        if (userName.trim() !== "" && letterOnlyRegex.test(userName)) {
+          localStorage.setItem('userName', userName); // Store the name in localStorage
+          setTimeout(() => {
+            window.location.href = "valentinePasscode.html"; // Redirect to the passcode page
+          }, 3000); // Wait for 3 seconds
+        } else {
+          // Show error message if the name is invalid (empty or contains non-letter characters)
+          document.getElementById('errorMessage').style.display = "block";
+        }
+      }
+
+      // Add event listener to check and redirect when a name is entered
+      document.getElementById('userName').addEventListener('input', checkNameAndRedirect);
+    </script>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
